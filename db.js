@@ -14,13 +14,6 @@ const dbConfig = process.env.DATABASE_URL ?
     database: getDatabaseName()
   };
 
-console.log("Database connection details:");
-console.log("DB_USER:", process.env.DB_USER);
-console.log("DB_PASS:", process.env.DB_PASS);
-console.log("DB_HOST:", process.env.DB_HOST);
-console.log("DB_PORT:", process.env.DB_PORT);
-console.log("Database Name:", getDatabaseName());
-
 const db = new Client(dbConfig);
 
 db.connect();
