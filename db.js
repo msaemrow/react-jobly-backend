@@ -10,7 +10,7 @@ const db = new Client({
   password: process.env.DB_PASS,
   host: process.env.DB_HOST,
   port: process.env.DB_PORT,
-  database: getDatabaseName()
+  database: process.env.DATABASE_URL || getDatabaseName()
 });
 
 console.log("Database connection details:");
