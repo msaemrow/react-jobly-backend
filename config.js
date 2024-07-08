@@ -8,12 +8,13 @@ require("colors");
 const SECRET_KEY = process.env.SECRET_KEY || "secret-dev";
 
 const PORT = +process.env.PORT || 3001;
+const DATABASE_URL = process.env.DATABASE_URL || "postgres://jzwgibsc:BlL2oo8L6Yxs-2XTrX8HYezHViw9Ez-x@ruby.db.elephantsql.com/jzwgibsc"
 
 // Use dev database, testing database, or via env var, production database
 function getDatabaseName() {
   return (process.env.NODE_ENV === "test")
   ? "jobly_test"
-  : process.env.DATABASE_URL;
+  : DATABASE_URL;
 }
 
 
